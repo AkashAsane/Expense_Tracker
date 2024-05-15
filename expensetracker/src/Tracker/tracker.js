@@ -28,18 +28,18 @@ function Expense() {
       alert("Insufficient balance. Cannot add expense.");
       return;
     }
-
+  
     const newExpense = {
       amount: expenseAmount,
       price: expensePrice,
       category: expenseCategory,
       date: expenseDate,
     };
-
+  
     const updatedBalance = parseFloat(balance) - parseFloat(expensePrice);
     setBalance(updatedBalance);
-
-    setExpenses([...expenses, newExpense]);
+  
+    setExpenses((prevExpenses) => [...prevExpenses, newExpense]);
     setOpenExpense(false);
   };
 
