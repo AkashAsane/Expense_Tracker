@@ -36,9 +36,10 @@ function Expense() {
       date: expenseDate,
     };
   
+    
+
     const updatedBalance = parseFloat(balance) - parseFloat(expensePrice);
     setBalance(updatedBalance);
-  
     setExpenses((prevExpenses) => [...prevExpenses, newExpense]);
     setOpenExpense(false);
   };
